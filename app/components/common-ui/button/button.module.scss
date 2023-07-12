@@ -1,0 +1,13 @@
+.btn {
+	background-color: var(--orange);
+	color: var(--black);
+	padding: 10px 20px;
+	border-radius: 20px;
+	display: inline-block;
+	transition: ease-out 0.2s all;
+
+	&:hover {
+		background-color: var(--dark-orange);
+		transition: ease-in 0.2s all;
+	}
+}
