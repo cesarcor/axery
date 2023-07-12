@@ -3,6 +3,7 @@
 	--white: #ffffff;
 	--gray: #3b3b3b;
 	--orange: #ffab7c;
+	--dark-orange: #ff8a4c;
 	--brown: #5c504c;
 }
 
@@ -45,4 +46,28 @@ h6 {
 #root,
 #__next {
 	isolation: isolate;
+}
+
+body {
+	background-color: var(--black);
+	color: var(--white);
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+/* LAYOUT */
+
+.site-section {
+	max-width: 95%;
+	margin: 0 auto;
+	padding: 1em;
 }
