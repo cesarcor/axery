@@ -1,0 +1,173 @@
+$color-brown: var(--brown);
+$color-white: var(--white);
+$color-black: var(--black);
+$border-radius: 10px;
+$image-item-height: 50vh;
+
+.hero_slider {
+	.container {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5em;
+		justify-content: center;
+
+		.images_col,
+		.content_col {
+			width: 100%;
+		}
+
+		.images_col {
+			@media (min-width: 768px) {
+				width: 60%;
+			}
+
+			height: $image-item-height;
+			overflow: hidden;
+
+			.image_item {
+				opacity: 0.1;
+				transition: opacity 0.3s ease-in-out;
+
+				.fig {
+					height: $image-item-height;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						border-radius: $border-radius;
+					}
+				}
+
+				&.active {
+					opacity: 1;
+				}
+			}
+
+			@media (min-width: 768px) {
+				height: 70vh;
+				min-height: 500px;
+
+				.image_item {
+					.fig {
+						height: 70vh;
+						min-height: 600px;
+					}
+				}
+			}
+		}
+
+		.content_col {
+			@media (min-width: 768px) {
+				width: 40%;
+			}
+		}
+
+		.content {
+			background-color: $color-brown;
+			display: flex;
+			flex-wrap: nowrap;
+			overflow: hidden;
+			border-radius: $border-radius;
+			height: 100%;
+
+			.content_item {
+				flex: 0 0 auto;
+				display: flex;
+				align-items: center;
+				width: 100%;
+				padding: 40px;
+
+				.designer {
+					font-size: 2.5rem;
+				}
+
+				h2 {
+					font-size: clamp(2.5rem, 5vw, 5rem);
+					line-height: 1.2;
+				}
+
+				p {
+					margin-bottom: 25px;
+				}
+			}
+		}
+
+		.controls {
+			position: absolute;
+			right: 0;
+			top: 15%;
+			margin-right: 20px;
+
+			.control_bars {
+				margin-bottom: 25px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				.control_bar {
+					display: block;
+					width: 5px;
+					height: 20px;
+					padding: 0;
+					background-color: $color-white;
+					opacity: 0.3;
+					border-radius: 20px;
+					margin-bottom: 5px;
+					outline: none;
+					border: none;
+
+					&.active {
+						opacity: 1;
+						height: 25px;
+					}
+				}
+			}
+
+			.control_btn {
+				background-color: transparent;
+				outline: none;
+				border: 1px solid $color-white;
+				border-radius: 45%;
+				padding: 15px 5px;
+				cursor: pointer;
+				display: block;
+
+				svg {
+					width: 30px;
+					height: 30px;
+					fill: $color-white;
+				}
+
+				&.control_prev {
+					margin-bottom: 10px;
+				}
+
+				&.control_next {
+					svg {
+						transform: rotate(180deg);
+					}
+				}
+
+				&:hover {
+					background-color: $color-white;
+					svg {
+						path {
+							stroke: $color-black;
+						}
+					}
+				}
+			}
+
+			@media (min-width: 768px) {
+				top: 40%;
+			}
+		}
+
+		@media (min-width: 768px) {
+			flex-wrap: nowrap;
+			flex-direction: row-reverse;
+		}
+	}
+}
