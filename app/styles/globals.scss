@@ -19,6 +19,7 @@
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
+	max-width: 100%;
 }
 img,
 picture,
@@ -62,6 +63,17 @@ a {
 
 button {
 	cursor: pointer;
+	background: none;
+	border: none;
+	outline: none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	li {
+		list-style: none;
+	}
 }
 
 /* LAYOUT */
@@ -70,4 +82,8 @@ button {
 	max-width: 95%;
 	margin: 0 auto;
 	padding: 1em;
+}
+
+.color-red {
+	color: red !important;
 }
