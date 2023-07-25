@@ -1,0 +1,25 @@
+.search {
+	position: relative;
+	input {
+		border-radius: 20px;
+		border: none;
+		outline: none;
+		padding: 5px 8px 5px 35px;
+		background-color: var(--gray);
+		border: 1px solid transparent;
+		color: var(--white);
+		font-size: 0.85rem;
+
+		&:focus {
+			border: 1px solid var(--dark-orange);
+		}
+	}
+
+	svg {
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top: 25%;
+		left: 10px;
+	}
+}
