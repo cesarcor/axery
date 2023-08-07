@@ -1,0 +1,31 @@
+.about_col {
+	flex-basis: calc(100% - 15px);
+}
+
+.about_fig {
+	border-radius: 20px;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+@media (min-width: 768px) {
+	.about_col {
+		flex-basis: calc(50% - 15px);
+
+		p {
+			width: 85%;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.about_col {
+		p {
+			width: 70%;
+		}
+	}
+}
