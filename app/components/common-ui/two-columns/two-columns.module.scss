@@ -1,0 +1,12 @@
+.two_columns {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	gap: 15px;
+}
+
+@media (min-width: 768px) {
+	.two_columns {
+		flex-direction: row;
+	}
+}
