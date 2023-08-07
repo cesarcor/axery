@@ -1,0 +1,36 @@
+.benefits {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 45px 20px;
+	margin: 40px 0;
+
+	.item {
+		flex-basis: calc(50% - 23px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg {
+			width: 65px;
+			height: 70px;
+			margin: 0 auto;
+		}
+
+		span {
+			display: block;
+			margin-top: 20px;
+			text-align: center;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.benefits {
+		gap: 20px;
+
+		.item {
+			flex-basis: calc(25% - 15px);
+		}
+	}
+}
