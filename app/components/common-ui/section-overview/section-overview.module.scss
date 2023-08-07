@@ -1,0 +1,33 @@
+.section_overview {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+	text-align: center;
+
+	p {
+		width: 100%;
+		margin: 15px 0;
+	}
+
+	.btn_flex_item {
+		text-align: right;
+	}
+}
+
+@media (min-width: 768px) {
+	.section_overview {
+		flex-direction: row;
+		gap: 55px;
+		text-align: unset;
+
+		p {
+			width: 75%;
+		}
+
+		.btn_flex_item {
+			flex: 1 0 15%;
+		}
+	}
+}
