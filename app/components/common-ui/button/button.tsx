@@ -2,11 +2,12 @@ import styles from './button.module.scss';
 
 interface ButtonProps {
 	text: string;
+	link: string;
 }
 
-const Button = ({ text }: ButtonProps) => {
+const Button = ({ text, link }: ButtonProps) => {
 	return (
-		<a href='#' className={styles.btn}>
+		<a href={link} className={styles.btn}>
 			{text}
 		</a>
 	);
