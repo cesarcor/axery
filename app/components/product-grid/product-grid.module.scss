@@ -1,0 +1,12 @@
+.product_grid {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+}
+
+@media (min-width: 768px) {
+	.product_grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
