@@ -8,7 +8,6 @@ function ArrowSVG(props: React.SVGProps<SVGSVGElement>) {
 			{...props}
 		>
 			<g stroke='none' strokeWidth={1} fill='none' fillRule='evenodd'>
-				<path d='M0 0H256V256H0z' />
 				<path
 					stroke='#FFF'
 					strokeWidth={8}
