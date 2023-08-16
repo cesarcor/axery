@@ -1,6 +1,5 @@
 .header {
 	padding: 1.3em 1em 0.5em 1em;
-	position: relative;
 	transition: 0.3s ease-out all;
 
 	.container {
@@ -9,6 +8,13 @@
 		align-items: center;
 		max-width: 95%;
 		margin: 0 auto;
+		position: relative;
+
+		.logo_col {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
 	}
 
 	&.down {
@@ -21,6 +27,7 @@
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 		width: 100%;
 		transition: 0.4s ease-in all;
+		padding-bottom: 1rem;
 	}
 }
 
