@@ -1,14 +1,21 @@
+.search_container {
+	position: relative;
+}
+
 .search {
 	position: relative;
-	input {
+
+	&_input {
 		border-radius: 20px;
 		border: none;
 		outline: none;
+		width: 100%;
 		padding: 5px 8px 5px 35px;
 		background-color: var(--gray);
 		border: 1px solid transparent;
 		color: var(--white);
-		font-size: 0.85rem;
+		font-size: 1.3rem;
+		transition: all 0.3s ease-out;
 
 		&:focus {
 			border: 1px solid var(--dark-orange);
@@ -19,7 +26,24 @@
 		width: 15px;
 		height: 15px;
 		position: absolute;
-		top: 25%;
+		top: 30%;
 		left: 10px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.search {
+		&_input {
+			width: unset;
+			font-size: 0.85rem;
+
+			svg {
+				top: 25%;
+			}
+
+			&:focus {
+				width: 300px;
+			}
+		}
 	}
 }
