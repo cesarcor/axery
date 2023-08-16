@@ -1,0 +1,25 @@
+.search_suggestions_modal {
+	background-color: var(--white);
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+
+.suggestion_link {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	color: var(--black);
+
+	&:hover {
+		background-color: var(--orange);
+	}
+}
+
+.suggestion_img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+}
