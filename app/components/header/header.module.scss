@@ -1,6 +1,6 @@
 .header {
 	padding: 1.3em 1em 0.5em 1em;
-	transition: 0.3s ease-out all;
+	transition: transform 0.3s ease;
 
 	.container {
 		display: flex;
@@ -17,11 +17,19 @@
 		}
 	}
 
-	&.down {
+	&.visible {
 		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
+		transform: translateY(0);
+	}
+
+	&.hidden {
+		transform: translateY(-100%);
+		transition: 0.4s ease-in all;
+		position: fixed;
+	}
+
+	&.visible,
+	&.hidden {
 		z-index: 100;
 		background-color: var(--black);
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);

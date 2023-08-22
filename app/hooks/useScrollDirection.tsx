@@ -1,32 +1,18 @@
 import { useState, useEffect } from 'react';
 
-type ScrollDirection = 'up' | 'down' | null;
-
 const useScrollDirection = () => {
-	const [headerIsHidden, setHeaderIsHidden] = useState(true);
-	const [scrollDirection, setScrollDirection] = useState<ScrollDirection>(null);
+	const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+	const [prevScrollPos, setPrevScrollPos] = useState(0);
+	const [currentScrollPos, setCurrentScrollPos] = useState(0);
 
 	useEffect(() => {
-		let lastScrollY = window.scrollY;
-
 		const handleScroll = () => {
-			const scrollY = window.scrollY;
-			const direction = scrollY > lastScrollY ? 'down' : 'up';
+			const newScrollPos = window.scrollY;
+			const scrollingUp = newScrollPos < prevScrollPos;
 
-			if (window.scrollY > window.innerHeight && direction === 'up') {
-				setHeaderIsHidden(false);
-			} else {
-				setHeaderIsHidden(true);
-			}
-
-			if (
-				direction !== scrollDirection &&
-				Math.abs(scrollY - lastScrollY) > 10
-			) {
-				setScrollDirection(direction);
-			}
-
-			lastScrollY = scrollY > 0 ? scrollY : 0;
+			setIsHeaderVisible(scrollingUp);
+			setCurrentScrollPos(newScrollPos);
+			setPrevScrollPos(newScrollPos);
 		};
 
 		window.addEventListener('scroll', handleScroll);
@@ -34,9 +20,9 @@ const useScrollDirection = () => {
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
-	}, []);
+	}, [prevScrollPos]);
 
-	return headerIsHidden;
+	return { currentScrollPos, isHeaderVisible };
 };
 
 export default useScrollDirection;

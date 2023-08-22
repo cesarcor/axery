@@ -12,9 +12,16 @@ import MobileMenu from './mobile-menu/mobile-menu';
 import useScrollDirection from '../../hooks/useScrollDirection';
 
 const Header = () => {
-	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const { currentScrollPos, isHeaderVisible } = useScrollDirection();
 
-	const scrollDirectionUp = useScrollDirection();
+	const headerVisibility = () =>
+		currentScrollPos > 61
+			? isHeaderVisible
+				? styles.visible
+				: styles.hidden
+			: '';
+
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	const toggleMobileMenu = () => {
 		setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -34,11 +41,7 @@ const Header = () => {
 
 	return (
 		<>
-			<header
-				className={`${styles.header} ${
-					scrollDirectionUp ? styles.retreat : styles.down
-				}`}
-			>
+			<header className={`${styles.header} ${headerVisibility()}`}>
 				<div className={styles.container}>
 					<div className={styles.search_col_mobile}>
 						<SearchBtn />
