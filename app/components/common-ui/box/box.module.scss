@@ -10,4 +10,10 @@
 	&.dark_box {
 		background-color: var(--gray);
 	}
+
+	&.has_bg_image {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 }
