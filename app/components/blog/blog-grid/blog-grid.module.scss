@@ -1,0 +1,13 @@
+.blog_grid {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+@media (min-width: 768px) {
+	.blog_grid {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
