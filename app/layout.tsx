@@ -5,7 +5,7 @@ import Header from './components/header/header';
 
 const open_sans = Open_Sans({
 	subsets: ['latin'],
-	weight: ['300', '400', '700'],
+	weight: ['300', '400', '700', '800'],
 });
 
 export const metadata: Metadata = {
