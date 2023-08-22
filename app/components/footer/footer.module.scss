@@ -1,0 +1,58 @@
+.container {
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 15px;
+	padding: 0 40px;
+	text-align: center;
+}
+
+.heading {
+	margin-bottom: 15px;
+}
+
+.nav_list {
+	li {
+		margin-bottom: 10px;
+
+		a {
+			color: var(--white);
+			font-size: 14px;
+			font-weight: 500;
+			letter-spacing: 1px;
+			transition: all 0.3s ease-in-out;
+			opacity: 0.65;
+
+			&:hover {
+				color: var(--dark-orange);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.underfooter {
+	justify-content: space-between;
+	flex-direction: column;
+	margin-top: 15px;
+	font-size: 0.85rem;
+}
+
+.policy_links {
+	li {
+		display: inline-block;
+		margin-right: 15px;
+		margin-bottom: 10px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		padding: 0 5%;
+		text-align: left;
+	}
+
+	.container,
+	.underfooter {
+		flex-direction: row;
+	}
+}
