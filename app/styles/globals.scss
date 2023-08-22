@@ -63,6 +63,11 @@ p {
 
 a {
 	text-decoration: none;
+	color: var(--white);
+
+	&:hover {
+		color: var(--dark-orange);
+	}
 }
 
 button {
@@ -119,4 +124,11 @@ figure {
 
 .text-white {
 	color: var(--white);
+}
+
+/* UTILS */
+
+.flex {
+	display: flex;
+	align-items: center;
 }
