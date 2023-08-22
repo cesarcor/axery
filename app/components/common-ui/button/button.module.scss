@@ -1,14 +1,60 @@
 .btn {
-	background-color: var(--orange);
-	color: var(--black);
 	text-align: center;
 	padding: 10px 20px;
 	border-radius: 20px;
 	display: inline-block;
 	transition: ease-out 0.2s all;
 
-	&:hover {
-		background-color: var(--dark-orange);
-		transition: ease-in 0.2s all;
+	.btn_content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+	}
+
+	&.solid {
+		background-color: var(--orange);
+		color: var(--black);
+
+		svg {
+			path {
+				stroke: var(--black);
+			}
+		}
+
+		&:hover {
+			background-color: var(--dark-orange);
+			color: var(--white);
+			transition: ease-in 0.2s all;
+		}
+	}
+
+	&.line {
+		border: 1px solid var(--white);
+		color: var(--white);
+
+		svg {
+			path {
+				stroke: var(--orange);
+			}
+		}
+
+		&:hover {
+			background-color: var(--white);
+			color: var(--black);
+			transition: ease-in 0.2s all;
+
+			svg {
+				path {
+					stroke: var(--dark-orange);
+				}
+			}
+		}
+	}
+
+	svg {
+		transform: rotate(90deg);
+		width: 20px;
+		height: 20px;
 	}
 }
