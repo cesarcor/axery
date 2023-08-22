@@ -1,6 +1,7 @@
 import styles from './blog-item.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
+import Button from '../../common-ui/button/button';
 
 const BlogItem = () => {
 	return (
@@ -27,6 +28,7 @@ const BlogItem = () => {
 						Lorem ipsum is simply dummy text of the printing industry. Lorem
 						ipsum has been the industrys standard dummy text
 					</p>
+					<Button text='Read More' link='#' buttonType='line' />
 				</div>
 			</div>
 		</article>
